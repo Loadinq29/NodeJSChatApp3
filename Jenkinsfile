@@ -20,7 +20,7 @@ node('Ubuntu-Approver-3120') {
             def scannerHome = tool 'Sonarqube Scanner'
             withSonarQubeEnv('sonarqube') {
                 sh "${scannerHome}/bin/sonar-scanner \
-                    -Dsonar.projectKey=ChatApp \
+                    -Dsonar.projectKey=ChatApp1 \
                     -Dsonar.sources=."
             }
         }
