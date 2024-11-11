@@ -17,7 +17,7 @@ node('Ubuntu-Approver-3120') {
 
     stage('SonarQube Analysis') {
         script {
-            def scannerHome = tool 'SonarQubeScanner'
+            def scannerHome = tool 'Sonarqube Scanner'
             withSonarQubeEnv('sonarqube') {
                 sh "${scannerHome}/bin/sonar-scanner \
                     -Dsonar.projectKey=gameapp \
